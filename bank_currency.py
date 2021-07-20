@@ -4,7 +4,7 @@ import lxml
 import csv
 
 
-URL = 'https://bank.gov.ua/ua/markets/exchangerates'
+URL = 'https://bank.gov.ua/ua/markets/exchangerates?&period=daily'
 
 
 def get_html(url):
@@ -37,6 +37,3 @@ def parse():
 	# 	for i in values:
 	# 		writer.writerow(i)
 	return values
-
-# for i in parse():
-# 	print(i)
