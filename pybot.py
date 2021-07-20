@@ -95,7 +95,7 @@ async def convert_to_uah(message: types.Message):
 		for i in range(len(temp)):
 			keyboard.add(types.InlineKeyboardButton(text=f"{temp[i]['Назва валюти']}", callback_data=f"from_{temp[i]['Код літерний']}"))
 		messages_bot.append(await message.answer("З якої валюти конвертуємо:", reply_markup=keyboard))
-		await
+
 
 # Call back functions (convert from foreign currency to uah)
 @dp.callback_query_handler(text=[f'from_{x["Код літерний"]}' for x in bank_currency.parse()])
